@@ -1,5 +1,4 @@
 <?php
-var_dump(__DIR__);
 
 /**
  * An example of a project-specific implementation.
@@ -16,7 +15,7 @@ var_dump(__DIR__);
 spl_autoload_register(function ($class) {
 
     // project-specific namespace prefix
-    $prefix = 'Foo\\Bar\\';
+    $prefix = 'App\\';
 
     // base directory for the namespace prefix
     $base_dir = __DIR__ . '/src/';
@@ -39,5 +38,6 @@ spl_autoload_register(function ($class) {
     // if the file exists, require it
     if (file_exists($file)) {
         require $file;
+       // var_dump($file);
     }
 });
